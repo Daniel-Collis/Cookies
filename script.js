@@ -1,7 +1,7 @@
 // Function to fetch the access token
 async function fetchAccessToken() {
-    const clientId = 'AXrhqnjtuNOQuHLkLjy6ypNaGyYMHBGTbXUZizzfGLPva5x2ZqiD1K2bKADTYPYJ9ZcnU7oMJ4rB-Sjk'; // Replace with your client ID
-    const secret = 'EDM_IjFC19Ms8BZK427xPGTI4S_pBCvyWm4k7vwqgrBP_0DIA0o4rFn8UrtXwtENL2UEhUp9G5jJYyyI'; // Replace with your secret key
+    const clientId = 'AZYUIsy3VGrpykZaJqlxDill8FREbKR7cJT-SvvjUDdeAAJEzCGpE0MF1tlD_p7wbG5IJDyx7oxqMhrc'; // Replace with your client ID
+    const secret = 'EKG8ln5xsgRgnIWEaT8fMUGDwezSMMNKHZOa1abIp-nhyrnyri6ppv1oCiQGjrw9xxgQs6ffCwWzEvJ5'; // Replace with your secret key
 
     const response = await fetch('https://api.sandbox.paypal.com/v1/oauth2/token', {
         method: 'POST',
@@ -30,7 +30,7 @@ async function createPaypalButtons() {
         paypal.Buttons({
             createSubscription: function(data, actions) {
                 return actions.subscription.create({
-                    'plan_id': 'P-1NK39223H40246609M4HZNPQ' // Replace with your actual PayPal Plan ID for Plan 1
+                    'plan_id': 'P-67323783YY2340433M4HD2JA' // Replace with your actual PayPal Plan ID for Plan 1
                 });
             },
             onApprove: function(data, actions) {
@@ -48,7 +48,7 @@ async function createPaypalButtons() {
         paypal.Buttons({
             createSubscription: function(data, actions) {
                 return actions.subscription.create({
-                    'plan_id': 'P-1RS381855U508163LM4HZPMQ' // Replace with your actual PayPal Plan ID for Plan 2
+                    'plan_id': 'P-9PY4033347908330WM4HD3IY' // Replace with your actual PayPal Plan ID for Plan 2
                 });
             },
             onApprove: function(data, actions) {
@@ -66,7 +66,7 @@ async function createPaypalButtons() {
         paypal.Buttons({
             createSubscription: function(data, actions) {
                 return actions.subscription.create({
-                    'plan_id': 'P-1G994000C5930145BM4HZQBI' // Replace with your actual PayPal Plan ID for Plan 3
+                    'plan_id': 'P-2NB85826R4275503FM4HD46A' // Replace with your actual PayPal Plan ID for Plan 3
                 });
             },
             onApprove: function(data, actions) {

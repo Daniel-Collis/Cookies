@@ -3,7 +3,7 @@ async function fetchAccessToken() {
     const clientId = 'AZYUIsy3VGrpykZaJqlxDill8FREbKR7cJT-SvvjUDdeAAJEzCGpE0MF1tlD_p7wbG5IJDyx7oxqMhrc'; // Replace with your client ID
     const secret = 'EKG8ln5xsgRgnIWEaT8fMUGDwezSMMNKHZOa1abIp-nhyrnyri6ppv1oCiQGjrw9xxgQs6ffCwWzEvJ5'; // Replace with your secret key
 
-    const response = await fetch('https://api.sandbox.paypal.com/v1/oauth2/token', {
+    const response = await fetch('https://api.paypal.com/v1/oauth2/token', {
         method: 'POST',
         headers: {
             'Authorization': 'Basic ' + btoa(clientId + ':' + secret),

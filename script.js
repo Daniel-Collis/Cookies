@@ -70,6 +70,20 @@ async function createPaypalButtons() {
                 });
             },
             onApprove: function(data, actions) {
-                    // Redirect to confirmation page with subscription ID and plan name
+                   // Redirect to confirmation page with subscription ID and plan name
     const planName = 'Deluxe Plan'; // Change based on the plan chosen
-    window.location.href = `confirmation.html?subscriptionID=${data.subscriptio
+    window.location.href = `confirmation.html?subscriptionID=${data.subscriptionID}&planName=${encodeURIComponent(planName)}`;
+            },
+            onError: function(err) {
+                console.error('Error occurred during subscription:', err);
+                alert('An error occurred. Please try again. Error details: ' + JSON.stringify(err));
+            }
+        }).render('#paypal-button-container-plan3'); // Render PayPal button in the div for Plan 3
+
+    } catch (error) {
+        console.error('Error creating Paypal buttons:', error);
+    }
+}
+
+// Call the function to create Paypal buttons
+createPaypalButtons();

@@ -1,0 +1,95 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Grid layout for products */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.product img {
+    width: 100%;  /* Adjust the width for responsive image */
+    height: auto;
+    max-width: 150px;  /* Optional: limit the size */
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Cart Section */
+#cart {
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-top: 1px solid #ddd;
+}
+
+/* New CSS for Subscription Plans */
+.plan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted for subscriptions */
+    gap: 20px; /* Space between the grid items */
+    padding: 20px; /* Added padding for spacing */
+}
+
+.plan {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    background-color: #f4f4f4; /* Slightly different background for differentiation */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.plan h3 {
+    margin: 0 0 10px;
+}
+
+.plan p {
+    margin: 10px 0;
+}
+
+/* Center the heading */
+#subscriptions h2 {
+    text-align: center; /* Center-align the text */
+    margin-top: 20px;  /* Optional: add some space above */
+}
+
+/* Hover effect for subscription plans */
+.plan:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow on hover */
+}

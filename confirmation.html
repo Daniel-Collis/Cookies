@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="confirmation-styles.css"> <!-- Adjust the filename if different -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+   <div class="confirmation-container">
+    <h1>Thank You for Your Subscription!</h1>
+    <div class="icon-container">
+    <i class="fas fa-check-circle" style="color: #4CAF50; font-size: 50px;"></i>
+    <div id="message"></div>
+   </div>
+    <script>
+        // Get the URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const subscriptionID = params.get('subscriptionID');
+        const planName = params.get('planName');
+
+        // Display the message
+        document.getElementById('message').innerHTML = `
+            <p>Thanks for choosing our ${planName}!</p>
+            <p>Your Subscription ID is: <strong>${subscriptionID}</strong></p>
+            <p>A receipt has been sent to your email.</p>
+        `;
+    </script>
+</body>
+</html>
